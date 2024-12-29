@@ -3,7 +3,7 @@ import axios from "axios";
 export const signup = async ({ name, email, password }) => {
   try {
     const resp = await axios.post(
-      "http://localhost:3000/api/users/register",
+      "/api/users/register",
       {
         name,
         email,
@@ -25,7 +25,7 @@ export const signup = async ({ name, email, password }) => {
 export const login = async ({ email, password }) => {
   try {
     const resp = await axios.post(
-      "http://localhost:3000/api/users/login",
+      "/api/users/login",
       {
         email,
         password,
@@ -53,7 +53,7 @@ export const updateProfilePicture =async({token, file})=>{
       };
       const formData = new FormData()
       formData.append('profilePicture',file) 
-      const resp = await axios.put(`http://localhost:3000/api/users/updateProfilePicture`,
+      const resp = await axios.put(`/api/users/updateProfilePicture`,
         formData,
         config
       );
