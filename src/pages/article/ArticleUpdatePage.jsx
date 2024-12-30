@@ -75,11 +75,15 @@ const ArticleUpdatePage = () => {
             Update Article
           </h1>
           <ArticlePicture photo={photoFile} setPhoto={setPhotoFile} post={post}/>
-          <Editor
-            content={body}
-            editable={true}
-            onDataChange={(data) => setBody(data)}
-          />
+          {
+            body && (
+              <Editor
+                content={body}
+                editable={true}
+                onDataChange={(data) => setBody(data)}
+              />        
+            )
+          }
         </div>
         <div className="w-full max-w-2xl mx-auto">
           <form onSubmit={handleSubmit(submitHandler)}>
