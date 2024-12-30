@@ -47,7 +47,11 @@ const Header = () => {
             {userState.userInfo ? (
               <button
                 type="button"
-                onClick={() => logout(dispatch)}
+                onClick={() => { 
+                  logout(dispatch)
+                  navigate('/')    
+                 }
+                }
                 className="border-red-500 px-4 rounded-full  py-1 border-2 text-red-500 hover:text-white hover:bg-red-500 transition-all duration-300"
               >
                 Log out
