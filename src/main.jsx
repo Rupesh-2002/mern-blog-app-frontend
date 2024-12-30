@@ -14,8 +14,9 @@ import ArticleCreatePage from './pages/article/ArticleCreatePage.jsx';
 import ArticlesPage from './pages/article/ArticlesPage.jsx';
 import ProfilePicturePage from './pages/profile/ProfilePicturePage.jsx';
 import axios from 'axios';
-import stables from './constants/stables.js';
-axios.defaults.baseURL = stables.API_BASE_URL
+
+axios.defaults.baseURL = import.meta.env.VITE_APP_API_URL
+
 const router = createBrowserRouter([
   {
     path : '/',

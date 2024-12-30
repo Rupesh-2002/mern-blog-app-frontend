@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import MainLayout from "../../components/MainLayout";
 import { useDispatch, useSelector } from "react-redux";
-import stables from "../../constants/stables";
 import { HiOutlineCamera } from "react-icons/hi";
 import toast from "react-hot-toast";
 import { updateProfilePicture } from "../../services/users";
@@ -38,7 +37,7 @@ const ProfilePicturePage = () => {
             {avatar ? (
               <>
                 <img
-                  src={stables.UPLOAD_FOLDER_BASE_URL + avatar}
+                  src={ avatar}
                   alt="profile"
                   className="w-full h-full object-cover"
                 />

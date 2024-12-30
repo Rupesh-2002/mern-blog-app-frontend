@@ -10,7 +10,6 @@ import ArticleDetailSkeleton from "../../components/ArticleDetailSkeleton";
 import ErrorMessage from "../../components/ErrorMessage";
 import Editor from "../../components/editor/Editor";
 import { FiEdit } from "react-icons/fi";
-import stables from "../../constants/stables";
 
 const ArticleDetailPage = () => {
   const { slug } = useParams();
@@ -20,6 +19,7 @@ const ArticleDetailPage = () => {
   const userState = useSelector((state) => state.user);
   const [deletedPost, setDeletedPost] = useState(false);
   const navigate = useNavigate();
+
   useEffect(() => {
     async function getPost() {
       try {
@@ -63,7 +63,7 @@ const ArticleDetailPage = () => {
               className="rounded-xl w-full"
               src={
                 post?.photo
-                  ? stables.UPLOAD_FOLDER_BASE_URL + post?.photo
+                  ? post?.photo
                   : images.samplePostImage
               }
               alt={post?.title}

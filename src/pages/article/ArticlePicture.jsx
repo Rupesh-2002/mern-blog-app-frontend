@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { HiOutlineCamera } from "react-icons/hi";
-import stables from "../../constants/stables";
 import { useSelector } from "react-redux";
 
 
@@ -38,7 +37,7 @@ const ArticlePicture = ({ photo, setPhoto, post=null }) => {
                 ) : (
                   post?.photo ? (
                     <img
-                    src={stables.UPLOAD_FOLDER_BASE_URL + post.photo}
+                    src={ post.photo}
                     alt="profile"
                     className="w-full h-full object-contain"
                   />

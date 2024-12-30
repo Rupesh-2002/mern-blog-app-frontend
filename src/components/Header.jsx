@@ -3,7 +3,6 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../store/actions/user";
 import { Link, useNavigate } from "react-router-dom";
-import stables from "../constants/stables";
 import images from "../constants/images";
 
 const Header = () => {
@@ -81,7 +80,7 @@ const Header = () => {
                   onClick={() => navigate("/profilePicture")}
                   src={
                     avatar
-                      ? stables.UPLOAD_FOLDER_BASE_URL + avatar
+                      ? avatar
                       : images.userImage
                   }
                   alt=""

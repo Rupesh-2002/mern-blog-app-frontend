@@ -2,7 +2,6 @@ import React from "react";
 import images from "../constants/images";
 import { BsCheckLg } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
-import stables from "../constants/stables";
 import { Link } from "react-router-dom";
 const ArticleCard = ({ post }) => {
   return (
@@ -11,8 +10,8 @@ const ArticleCard = ({ post }) => {
       <img
         className="w-full object-cover object-center max-h-52"
         src={
-          post.photo
-            ? stables.UPLOAD_FOLDER_BASE_URL + post.photo
+          post?.photo
+            ? post.photo
             : images.samplePostImage
         }
         alt=""
@@ -28,8 +27,8 @@ const ArticleCard = ({ post }) => {
           <div className="flex items-center gap-x-2 md:gap-x-2.5">
             <img
               src={
-                post.user.avatar
-                  ? stables.UPLOAD_FOLDER_BASE_URL + post.user.avatar
+                post?.user.avatar
+                  ? post.user.avatar
                   : images.userImage
               }
               alt="post profile"
