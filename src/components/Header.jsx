@@ -36,12 +36,12 @@ const Header = () => {
               <li>
                 <Link to="/articles">Articles</Link>
               </li>
-              <li>
+             {/* <li>
                 <Link to="/">Pricing</Link>
               </li>
               <li>
                 <Link to="/">Faq</Link>
-              </li>
+              </li> */}
             </ul>
             {userState.userInfo ? (
               <button
