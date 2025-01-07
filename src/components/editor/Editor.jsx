@@ -12,7 +12,7 @@ const Editor = ({ onDataChange, content, editable }) => {
     editorProps: {
       attributes: {
         class:
-          "prose dark:prose-invert prose-sm sm:prose-base mt-7 max-w-none focus:outline-none prose-pre:bg-[#282c34] prose-pre:text-[#abb2bf]",
+          "text-black text-xl dark:prose-invert prose-sm sm:prose-base mt-7 max-w-none focus:outline-none prose-pre:bg-black prose-pre:text-black",
       },
     },
     onUpdate: ({ editor }) => {

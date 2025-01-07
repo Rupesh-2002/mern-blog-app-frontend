@@ -27,7 +27,10 @@ const Header = () => {
           <nav
             className={`${
               navIsVisible ? "right-0" : "-right-full"
-            } transition-all duration-300 mt-[56px] lg:mt-0 bg-dark-hard lg:bg-transparent z-[49] flex flex-col lg:w-auto justify-center lg:justify-end lg:flex-row fixed w-full top-0 bottom-0 lg:static gap-9 items-center`}
+            } 
+            transition-all duration-300 mt-[56px] bg-dark-hard z-[49] flex flex-col fixed w-full top-0 bottom-0 gap-9 items-center lg:mt-0 lg:bg-transparent lg:w-auto lg:justify-end lg:flex-row lg:static
+            `
+          }
           >
             <ul className="text-white items-center gap-y-5 lg:text-dark-soft flex flex-col lg:flex-row gap-x-5 font-semibold">
               <li>
