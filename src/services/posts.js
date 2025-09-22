@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const getAllPosts = async ({searchKeyword, page}) => {
+const getAllPosts = async ({searchKeyword, page = null}) => {
   try {
-    const resp = await axios.get(`/api/posts?searchKeyword=${searchKeyword}&page=${page}`);
+    const resp = await axios.get(`/api/posts?searchKeyword=${searchKeyword}`);
     const data = {
       posts : resp.data,
       currPage : parseInt( resp.headers['x-currentpage']),
